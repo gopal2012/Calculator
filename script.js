@@ -7,7 +7,7 @@ Array.from(buttons).forEach((button) => {
 
         if (value === '=') {
             try {
-                string = string + '=' + eval(string);
+                string = eval(string);
             } catch {
                 string = "Error";
             }
