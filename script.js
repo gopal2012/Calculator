@@ -5,13 +5,13 @@ Array.from(buttons).forEach((button) => {
     button.addEventListener('click', (e) => {
         const value = e.target.innerHTML;
 
-        if (value == '=') {
+        if (value === '=') {
             try {
-                string = eval(string);
-            } catch (error) {
+                string = string + '=' + eval(string);
+            } catch {
                 string = "Error";
             }
-        } else if (value == 'C') {
+        } else if (value === 'C') {
             string = "";
         } else {
             string += value;
@@ -20,3 +20,4 @@ Array.from(buttons).forEach((button) => {
         document.querySelector('input').value = string;
     });
 });
+
