@@ -7,9 +7,9 @@ Array.from(buttons).forEach((button) => {
 
         if (value === '=') {
             try {
-                string = eval(string);
+                string = eval(string).toString(); // Evaluate and convert to string
             } catch {
-                string = "Error";
+                string = "Error"; // Handle invalid expressions
             }
         } else if (value === 'C') {
             string = "";
